@@ -8,11 +8,6 @@ cleanup() {
 trap cleanup SIGINT
 trap cleanup SIGTERM
 
-# Load environment variables from /home/config if the file exists
-if [ -f /home/config ]; then
-    echo "Loading environment variables from /home/config"
-    export $(grep -v '^#' /home/config | xargs)
-fi
 
 # Exit if BACKUP_TARGETS is not set
 if [ -z "$BACKUP_TARGETS" ]; then
