@@ -32,4 +32,5 @@ COPY entrypoint.sh /entrypoint.sh
 COPY do_backup.sh /do_backup.sh
 COPY set_env.sh /set_env.sh
 RUN chmod +x /entrypoint.sh && chmod +x /do_backup.sh && chmod +x /set_env.sh
+RUN ./set_env.sh
 CMD ["/entrypoint.sh"]
