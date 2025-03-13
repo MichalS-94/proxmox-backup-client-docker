@@ -10,7 +10,7 @@ trap cleanup SIGTERM
 
 # Set env if exists
 if [ -f "/set_env.sh" ]; then
-    . /set_env.sh
+    . ./set_env.sh
 fi
 
 # Exit if BACKUP_TARGETS is not set
